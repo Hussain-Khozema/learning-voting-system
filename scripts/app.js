@@ -85,9 +85,9 @@ App = {
                           let voteStatus = App.votedReplies[App.comments[commentIndex].commentID][i]
                           replies = replies.concat(`<div class="d-flex flex-row p-2 bd-highlight">
                           <div class = "d-flex flex-column p-2" style = "margin-top:0.5rem;">
-                            <img class="bd-highlight" onclick="App.voteReply(${commentIndex}, ${i} , ${voteStatus == 1 ? "-1" : ((voteStatus == 0)? "1": "2" )})" src="${(voteStatus == 1) ? "up1.png" : "up.png" }" alt="Up arrow" style="width:30px;height:30px;">
+                            <img class="bd-highlight" onclick="App.voteReply(${commentIndex}, ${i} , ${voteStatus == 1 ? "-1" : ((voteStatus == 0)? "1": "2" )})" src="${(voteStatus == 1) ? "assets/up1.png" : "assets/up.png" }" alt="Up arrow" style="width:30px;height:30px;">
                             <p class="bd-highlight" id="voteReply${commentIndex + "and" + i}" style = "justify-content: center; align-items: center; margin-top: 0.5rem; margin-bottom: 0.5rem;text-align:center;">${App.comments[commentIndex].replies[i].votes}</p>
-                            <img class="bd-highlight" onclick="App.voteReply(${commentIndex} , ${i},${voteStatus == -1 ? "1" : ((voteStatus == 0)? "-1": "-2" )})" src="${(voteStatus == -1) ? "down1.png" : "down.png" }" alt="down arrow" style="width:30px;height:30px;">
+                            <img class="bd-highlight" onclick="App.voteReply(${commentIndex} , ${i},${voteStatus == -1 ? "1" : ((voteStatus == 0)? "-1": "-2" )})" src="${(voteStatus == -1) ? "assets/down1.png" : "assets/down.png" }" alt="down arrow" style="width:30px;height:30px;">
                           </div>
                           <div class = "p-2">
                             <div class="row">
@@ -104,9 +104,9 @@ App = {
           <div class ="card">
           <div class="card-header d-flex flex-row p-2 bd-highlight" id="headingOne">
               <div class = "d-flex flex-column p-2" id="${commentIndex}" data-index="${commentIndex}" style = "margin-top:0.5rem;">
-                    <img class="bd-highlight" onclick="App.vote(${commentIndex} , ${voteStatus == 1 ? "-1" : ((voteStatus == 0)? "1": "2" )})" src="${(voteStatus == 1) ? "up1.png" : "up.png" }" alt="Up arrow" style="width:30px;height:30px;">
+                    <img class="bd-highlight" onclick="App.vote(${commentIndex} , ${voteStatus == 1 ? "-1" : ((voteStatus == 0)? "1": "2" )})" src="${(voteStatus == 1) ? "assets/up1.png" : "assets/up.png" }" alt="Up arrow" style="width:30px;height:30px;">
                     <p class="bd-highlight" id="vote${commentIndex}" style = "justify-content: center; align-items: center; margin-top: 0.5rem; margin-bottom: 0.5rem;text-align:center;">${App.comments[commentIndex].votes}</p>
-                    <img class="bd-highlight" onclick="App.vote(${commentIndex} ,${voteStatus == -1 ? "1" : ((voteStatus == 0)? "-1": "-2" )})" src="${(voteStatus == -1) ? "down1.png" : "down.png" }" alt="down arrow" style="width:30px;height:30px;">
+                    <img class="bd-highlight" onclick="App.vote(${commentIndex} ,${voteStatus == -1 ? "1" : ((voteStatus == 0)? "-1": "-2" )})" src="${(voteStatus == -1) ? "assets/down1.png" : "assets/down.png" }" alt="down arrow" style="width:30px;height:30px;">
               </div>
                 <div class = "p-2">
                   <div class="row justify-content-start">
